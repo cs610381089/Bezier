@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.besaier.MainActivity">
+
+    <com.example.administrator.besaier.ControlView
+        android:id="@+id/myView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="start"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:checkedButton="@id/addBt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/removeBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="remove"
+            android:text="删除" />
+
+        <RadioButton
+            android:id="@+id/addBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="add"
+            android:text="添加" />
+
+        <RadioButton
+            android:id="@+id/moveBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="move"
+            android:text="移动" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:checkedButton="@id/editBt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/editBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="edit"
+            android:text="修改模式" />
+
+        <RadioButton
+            android:id="@+id/showBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="show"
+            android:text="演示模式" />
+
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>
